@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- fridge body -->
+    <path android:fillColor="#F2F7F7"
+        android:pathData="M43,28 h22 a5,5 0 0 1 5,5 v42 a5,5 0 0 1 -5,5 h-22 a5,5 0 0 1 -5,-5 v-42 a5,5 0 0 1 5,-5 z" />
+    <!-- door split -->
+    <path android:fillColor="#1F7A4D" android:pathData="M38,46 h32 v2.5 h-32 z" />
+    <!-- handles -->
+    <path android:fillColor="#10323A" android:pathData="M43.5,34 h2.5 v8 h-2.5 z" />
+    <path android:fillColor="#10323A" android:pathData="M43.5,53 h2.5 v12 h-2.5 z" />
+    <!-- magnet -->
+    <path android:fillColor="#F2B632" android:pathData="M56,61 a4.5,4.5 0 1 0 9,0 a4.5,4.5 0 1 0 -9,0 z" />
+</vector>

@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'uk.fridgeraid.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'uk.fridgeraid.app'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // The GitHub build decodes a fixed signing key here, so each new APK installs over the last one.
+    def keystoreFile = file('fridgeraid.keystore')
+    signingConfigs {
+        fixed {
+            storeFile keystoreFile
+            storePassword 'fridgeraid'
+            keyAlias 'fridgeraid'
+            keyPassword 'fridgeraid'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (keystoreFile.exists()) {
+                signingConfig signingConfigs.fixed
+            } else {
+                signingConfig signingConfigs.debug
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
